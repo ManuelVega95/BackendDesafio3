@@ -149,32 +149,6 @@ pm.getProducts();
 
 
 
-app.post('/api', (req, res) => {
 
-    try {
-        const { title, description, price, thumbnail, code, stock } = req.body // es lo mismo   const usuario = req.body --> usuario.nombre y usuario.apellido
-
-        if (!title || !description || !price || !thumbnail || !code || !stock) {
-            return res.status(400).json({
-                message: "Faltan completar datos"
-            })
-        }
-
-        return res.json({
-            title: '',
-            description: '',
-            price: 0,
-            thumbnail: '',
-            code: 0,
-            stock: 0,
-
-        }).status(200)
-
-    } catch (error) {
-        return res.status(501).json({
-            message: "error inesperado del servidor"
-        })
-    }
-})
 */
 

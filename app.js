@@ -4,6 +4,7 @@ import ProductManager  from './ProductManager.js';
 
 const app = express()
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 const pm = new ProductManager();
 const readProducts = pm.readProducts()
